@@ -1,0 +1,140 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 22;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 0px 4px #FBB400;
+    padding: 10px 0;
+}
+
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__link img{
+    height: 80px;
+}
+
+.menu__item{
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.625rem, -0.057rem + 3.41vw, 2.5rem);
+}
+
+.menu__close img{
+    width: 50px;
+    height: 45px;
+}
+
+.menu__close{
+    display: none;
+}
+
+.menu__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__link, .user-action__link img{
+    transition: all .5s;
+}
+
+.menu__link:hover{
+    transform: scale(1.1);
+    color: #FBB400;
+}
+
+.user-action{
+    display: flex;
+    align-items: center;
+    gap: clamp(0rem, -1.364rem + 6.82vw, 3.75rem);
+}
+
+.user-action__link img:hover{
+    transform: translateY(5px);
+}
+
+.header__button{
+    transition: all 0.6s;
+}
+
+.header__button:hover{
+    box-shadow: 1px 1px 13px #99BAED;
+}
+
+.menu__burger{
+    display: none;
+    cursor: pointer;
+}
+
+.menu__button{
+    display: none;
+}
+
+
+@media(max-width: 880px){
+    /* значок менюшки */
+    .menu__burger{
+        width: 37px;
+        height: 23px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+    .burger{
+        background-color: #99BAED;
+        height: 3px;
+        width: 100%;
+    }
+     /* значок менюшки */
+
+    .user-action{
+        order: 1;
+    }
+
+
+    .menu__item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: radial-gradient(#A3C1EF, #3e85ee);
+        position: absolute;
+        left: 0;
+        top: -2000%;
+        width: 50%;
+        height: 100vh;
+        gap: 10px;
+        transition: all .9s;
+        z-index: 20;
+        padding: 30px 0 10px 0;
+    }
+
+    .menu__close{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu__item-open{
+        top: 100px;
+    }
+
+    .header__button{
+        display: none;
+    }
+
+    .menu__button{
+        display: block;
+    }
+
+}

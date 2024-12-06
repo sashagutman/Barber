@@ -1,0 +1,104 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 13px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+a{
+    text-decoration: none;
+    color: #163561;
+    
+}
+
+ol, ul {
+	list-style: none;
+}
+
+
+.__container{
+    max-width: 1360px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+body{
+    font-family: "Catamaran", sans-serif;
+    font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0;
+    position: relative;
+}
+
+.btn{
+    width: clamp(6.875rem, 5.966rem + 4.55vw, 9.375rem);
+    height: 45px;
+    border-radius: 5px;
+    background-color: #99BAED;
+    color: #fff;
+    font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.text{
+    font-size: clamp(0.875rem, 0.739rem + 0.68vw, 1.25rem);
+    color: 153461;
+    font-weight: 300;
+
+}
+
+.yellow-text{
+    color: #FBB400;
+}
+
+.title{
+    font-size: 50px;
+    line-height: 116.6%;
+}
+
+.bg-filter{
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(163, 193, 239, 0.6);
+  }
+
+.bg-filter-close{
+    display: block;
+}
+
+
